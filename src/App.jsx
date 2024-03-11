@@ -4,6 +4,7 @@ import Dice from "./Dice.jsx";
 import Confetti from "react-confetti";
 import audioEffect from "./audio/crowd.mp3";
 function App() {
+    
     const [audio] = React.useState(new Audio(audioEffect)); // Create an Audio object
     function randomNumbers() {
         let rand = [];
@@ -83,7 +84,8 @@ React.useEffect(()=>{
         setTenzies(true);
         audio.play();
     }
-},[dice]);
+},[dice,audio]);
+  
 React.useEffect(()=>{
 console.log("YOU WON")
 },[tenzies]);
