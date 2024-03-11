@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(246, 201, 201);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body covers the viewport height */
+}
+
+main {
+    background-color: rgb(237, 221, 221);
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 600px; /* Maximum width */
+    height: auto; /* Adjusted height for responsiveness */
+    border-radius: 20px; /* Reduced border-radius */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+}
+
+.dice-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dice-face {
+    color: rgb(0, 0, 0);
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: aquamarine;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: larger;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+}
+
+.btn {
+    margin-top: 20px; /* Reduced margin-top */
+    width: 100%; /* Full width */
+    max-width: 160px; /* Maximum width */
+    height: 50px; /* Adjusted height for responsiveness */
+    border-radius: 5px;
+    background-color: #5871ca;
+    font-size: larger;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+    color: white;
+    font-weight: 800;
+}
+
+.title {
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 10px; /* Added margin-bottom */
+    font-size: 2rem; /* Increased font size for title */
+}
+
+.instructions {
+    font-size: 1.2rem; /* Adjusted font size */
+    margin-bottom: 20px; /* Added margin-bottom */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    main {
+        width: 90%; /* Adjusted width for smaller screens */
+    }
+}
