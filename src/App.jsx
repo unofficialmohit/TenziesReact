@@ -2,7 +2,9 @@ import React from "react";
 import "./styles.css";
 import Dice from "./Dice.jsx";
 import Confetti from "react-confetti";
+import audioEffect from "./audio/crowd.mp3";
 function App() {
+    const [audio] = React.useState(new Audio(audioEffect)); // Create an Audio object
     function randomNumbers() {
         let rand = [];
         for (let i = 0; i < 10; i++) {
@@ -23,6 +25,7 @@ function App() {
     {
         setDice(randomNumbers());
         setTenzies(false);
+        audio.pause();
     }
     else
     {
@@ -78,6 +81,7 @@ React.useEffect(()=>{
     if(flag===1)
     {
         setTenzies(true);
+        audio.play();
     }
 },[dice]);
 React.useEffect(()=>{
