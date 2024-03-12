@@ -21,15 +21,19 @@ function App() {
   }
   const [dice, setDice] = React.useState(randomNumbers());
   const [tenzies,setTenzies]=React.useState(false);
+  const [rolls,setRolls]=React.useState(0);
   function handleClick() {
     if(tenzies)
     {
         setDice(randomNumbers());
         setTenzies(false);
+        setRolls(0);
         audio.pause();
+
     }
     else
     {
+    setRolls(rolls+1);
     setDice((prevData)=>{
         let temp=prevData.map((dice)=>{
             if(dice.isHeld)
@@ -95,6 +99,7 @@ console.log("YOU WON")
       {tenzies && <Confetti/>}
       <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
+        <h3>Rolls : {rolls}</h3>
         <div className="dice-container">
           {dice.map((data) => {
             return <Dice key={data.id} value={data} heldData={()=>heldData(data.id)}/>;
