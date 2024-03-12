@@ -68,13 +68,14 @@ console.log(dice);
 }
 React.useEffect(()=>{
     let flag=1;
+  
     for(let i=1;i<dice.length;i++)
     {   
         if((dice[i].value!==dice[i-1].value))
         {
             flag=0;
         }
-        if(!dice[i].isHeld)
+        if(!dice[i].isHeld||!dice[i-1].isHeld)
         {
             flag=0;
         }
